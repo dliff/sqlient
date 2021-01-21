@@ -1,0 +1,9 @@
+{
+  "presets": ["es2015"],
+  "ignore": [
+    "src"
+  ]
+}
+{
+  "presets": ["@emotion/babel-preset-css-prop"]
+}

@@ -6,7 +6,7 @@ import {connect, useSelector} from "react-redux";
 
 function App() {
     const connection = useSelector(state => state.connection)
-  return (
+    return (
       <>
           {!connection && <ConnectView />}
           {connection && <QueryView />}

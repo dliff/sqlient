@@ -1,30 +1,44 @@
-import React, { useState } from "react";
+/** @jsxRuntime classic */
+/** @jsx jsx */
 
+import React from "react";
 import { jsx, css, Global, ClassNames } from '@emotion/react'
+import * as style from './style'
 
-import {connect, useSelector} from 'react-redux'
-import { attemptConnect } from "./state/actions.js"
-const leftPaneStyle = css`
-width:200px;
-float:left;
-height:100px;
-border:2px solid black;
-`;
+import TableListView from "./TableListView";
+import QueryEditorView from "./QueryEditorView"
+import QueryResultsView from "./QueryResultsView"
+import SchemaView from "./SchemaView"
 
 const QueryView = (props) => {
-    const tables = useSelector(state => state.tables)
     return (
         <>
-            <Global
-      styles={css`
-        html,body {
-          height:100%;
-        }
-      `}
-    />
-            <div className={leftPaneStyle}>Hello</div>
-    </>
-
+            <Global styles={style.fullHeightStyle} />
+            <div css={style.columnStyle}>
+                <div css={style.col1Style}>
+                    <h4>Tables</h4>
+                    <TableListView/>
+                </div>
+                <div css={style.col2Style}>
+                    <div css={style.equalRow}>
+                        <div css={style.flexRow}>
+                            <div css={style.editorColumn}>
+                                <h4>Query Editor</h4>
+                                <QueryEditorView />
+                            </div>
+                            <div css={style.schemaColumn}>
+                                <h4>Schema</h4>
+                                <SchemaView />
+                            </div>
+                        </div>
+                    </div>
+                    <div css={style.equalRow}>
+                        <QueryResultsView />
+                    </div>
+                </div>
+            </div>
+            >
+        </>
     );
 }
 

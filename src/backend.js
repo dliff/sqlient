@@ -47,7 +47,7 @@ app.post('/api/connect', (req, res) => {
             })
         })
         .catch((failure) => {
-            sendError(res, "Unable to connect. Please verify the database is reachable.")
+            sendError(res, "Unable to connect: " + failure.toString())
         });
 });
 
@@ -62,9 +62,8 @@ app.post('/api/query', (req, res) => {
             })
         })
         .catch(e => {
-            console.error(e);
-            sendError(res, "Error running query.")
+            sendError(res, e.toString())
         })
 });
 
-app.listen(port, () => console.log(`Listening on port ${port}`));
+app.listen(port, () => console.log(`Ready for SQL! ${port}`));

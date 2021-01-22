@@ -8,7 +8,7 @@ Install Dependencies
 
 Start Node Backend
 
-`yarn start backend`
+`yarn start-backend`
 
 Start React App
 

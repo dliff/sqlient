@@ -13,11 +13,10 @@ export const fullHeightStyle = css`
 box-sizing: border-box;
 }
 body, html, #root {
-          height:100%;
-          min-height:100%;
-        }
+height:100%;
+min-height:100%;
+}
 `;
-
 export const col1Style = css`
 display: flex;
 flex-flow: column;
@@ -37,7 +36,6 @@ flex: 80%;
 padding-left:20px;
 overflow:hidden;
 `;
-
 export const col3Style = css`
 display: flex;
 flex-flow: column;
@@ -51,10 +49,6 @@ export const flexRow = css`
 display: flex;
 flex-flow: row;
 `;
-export const flexColumn = css`
-display: flex;
-flex-flow: column;
-`;
 export const editorColumn = css`
 flex: 60%;
 padding-right:20px;
@@ -63,7 +57,6 @@ export const schemaColumn = css`
 padding-left:20px;
 flex: 40%;
 `;
-
 export const tableListStyle = css`
 flex: 0 1 auto;
 overflow:scroll;
@@ -90,7 +83,6 @@ flex: 0 1 auto;
 overflow:scroll;
 width:100%;
 `;
-
 export const queryButtonStyle = css`
 border-radius:20px;
 border:0;
@@ -107,25 +99,22 @@ font-size:20px;
 color: #cb4c11;
 }
 `;
-
 export const queryStatus = css`
 float:left;
 margin-top:10px;
 `
 
 // ConnectView Styles
-
-
 export const mainStyle = css`
-        padding: 32px;
-        background-color: #cb4c11;
-        font-size: 24px;
-        border-radius: 25px;
-        width:400px;
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
+padding: 32px;
+background-color: #cb4c11;
+font-size: 24px;
+border-radius: 25px;
+width:400px;
+position: absolute;
+top: 50%;
+left: 50%;
+transform: translate(-50%, -50%);
 `;
 export const inputGroupStyle = css`
 p {
@@ -149,7 +138,6 @@ margin: 0 auto;
 display:block;
 margin-top:25px;
 `;
-
 export const resultsTable = css`
  display: grid;
 }

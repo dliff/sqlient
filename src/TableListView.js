@@ -19,7 +19,11 @@ const TableListView = () => {
     return (
         <ul css={style.tableListStyle}>
             {tables.map( t =>
-                <li css={activeTable === t.tablename ? style.activeStyle : null} key={t.tablename} onClick={() => _setActiveTable(t.tablename)}>{t.tablename}</li>
+                <li css={activeTable === t.tablename ? style.activeStyle : null}
+                    key={t.tablename}
+                    onClick={() => _setActiveTable(t.tablename)}>
+                    {t.tablename}
+                </li>
             )}
         </ul>
     );
